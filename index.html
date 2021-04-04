@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/d591172109.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/chessboard/css/chessboard-1.0.0.css">
+  <title>Heroic Chess</title>
+  <script src="/node_modules/howler/dist/howler.js"></script>
+ 
+</head>
+<body>
+  <script src="/audio.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/chess.js"></script>
+  <script src="/chessboard/js/chessboard-1.0.0.js"></script>
+ 
+
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Heroic Chess</a></h1>
+        <ul>
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="#home-info">Regras</a></li>
+          <li><a href="#features">Sobre</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="showcase" >
+      <div id = "board" class="container" style="width:500px; height:500px">
+       
+        <div id="player"></div>
+        <div class="showcase-content" >
+          <h1><span class="text-primary">Heroic</span> Chess</h1>
+          <p id="roomNumbers" class="lead">Enter a room number between 0 and 99</p>
+          <form >
+            <div class="row">
+              <div class="col" >
+                <input type="number" id="room" min="0" max="99" class="form-control form-control-md number input" placeholder="  Entre em uma sala...">
+              </div>
+              <div class="col">
+                <button id="button" class="btn btn-success" onclick="connect()">Connect</button>
+              </div>
+              <div id="state"></div>
+            </form>
+            
+      </div>
+      
+    <script src="/game.js"></script>
+    
+          </div>
+          </div>
+       
+
+      </div>
+    </div>
+  </header>
+
+  <section id="home-info" class="bg-dark">
+    <div class="info-img">
+      <img class="rules" src="./img/svg/Frame 4.svg" alt="">
+    </div>
+    <div class="info-content">
+      <h2><span class="text-primary">Regras</span> Xadrez</h2>
+      <p>
+        No Xadrez Heroico, é aleatorizado um poder de heroi a uma das peças menores ou ao rei, 
+        o poder heroico só pode ser usado uma vez durante a partida. A única peça que não recebe poder é a Rainha.
+      </p>
+      <a href="" class="btn btn-light">Read More</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="box bg-light">
+      <img class="images" src="./img/svg/undraw_video_game_night_8h8m.svg" alt="">
+      <h3>Diversão Garantida</h3>
+      <p>Jogue com amigos, divirta-se e relaxe</p>
+    </div>
+    <div class="box bg-primary">
+        <img class="images" src="./img/svg/Frame 1.svg" alt="">
+        <h3>Novas Regras</h3>
+        <p>Agora as peças tem poderes!!</p>
+    </div>
+    <div class="box bg-light">
+        <img class="images" src="./img/svg/illustration.svg" alt="">
+        <h3>Benefícios para a Mente</h3>
+        <p>O Xadrez promove diversos benefícios para a mente!</p>
+    </div>
+  </section>
+
+  <div class="clr"></div>
+
+  <footer id="main-footer">
+    <p>Heroic Chess 2021</p>
+  </footer>
+</body>
+</html>
